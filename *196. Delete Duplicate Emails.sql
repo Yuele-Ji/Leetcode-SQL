@@ -2,7 +2,7 @@
 DELETE FROM Person 
 WHERE Id NOT IN (SELECT tmp.Id FROM (SELECT MIN(Id) AS Id FROM Person GROUP BY Email) AS tmp)
 
--- use subquery to select distinct email
+-- group by email then select the min id
 -- then delete rows that not belongs to that subquery
 
 --2.SELF JOIN

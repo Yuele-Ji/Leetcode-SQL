@@ -3,3 +3,5 @@ FROM Employee e
 LEFT JOIN Bonus b
 ON e.empId = b.empId
 WHERE COALESCE(b.bonus,0) < 1000
+
+-- ON AND / WHERE
